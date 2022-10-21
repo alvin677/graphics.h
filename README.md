@@ -37,7 +37,7 @@ After that you're ready to work on your project.
 Existing functions in the library:
 
 ```cpp
-void init(int windowX, int windowY, std::string title)
+void init(int windowX, int windowY, std::string title) {}
 int create(int type, int x, int y, int color = WHITE, int width = 1, int height = 1) // As of right now, the only type existing is 0, and it's a rectangle.
 void setColor(int id, int color)
 void setPosition(int id, int x, int y, int prevColor = BLACK)
