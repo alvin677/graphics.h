@@ -68,6 +68,23 @@ public:
 		objects.at(id).at(2) = y;
 	}
 
+	void move(int id, std::string direction, int amount, int prevColor = BLACK) {
+		for (int i = 0; i < amount; i++) {
+			if (direction == "up") {
+				setPosition(id, objects.at(id).at(1), objects.at(id).at(2)-1, prevColor);
+			}
+			else if (direction == "right") {
+				setPosition(id, objects.at(id).at(1)+1, objects.at(id).at(2), prevColor);
+			}
+			else if (direction == "down") {
+				setPosition(id, objects.at(id).at(1), objects.at(id).at(2)+1, prevColor);
+			}
+			else if (direction == "left") {
+				setPosition(id, objects.at(id).at(1)-1, objects.at(id).at(2), prevColor);
+			}
+		};
+	};
+
 	void setSize(int id, int width, int height) {
 		objects.at(id).at(3) = width;
 		objects.at(id).at(4) = height;

@@ -14,7 +14,8 @@ int main()
     while (true) {
         if (graphics.collidesWith(obj, obj2)) { graphics.renderText("COLLIDES", 0, 0, 10); };
 
-        graphics.setPosition(obj, graphics.getPositionX(obj)+1, 10);
+        //graphics.setPosition(obj, graphics.getPositionX(obj)+1, 10);
+        graphics.move(obj, "right", 1);
         graphics.renderAll();
         if (graphics.keyDown('A')) { graphics.renderText("A PRESSED", 10, 10, 9); }
         Sleep(10);
