@@ -2,7 +2,6 @@
 A graphics library that can be used in C/C++
 
 To use, simply put the graphics.h file in your repos/PROJECTNAME/PROJECTNAME/ folder.
-The graphics.cpp file is just a short example.
 
 ```cpp
 // Color variables
