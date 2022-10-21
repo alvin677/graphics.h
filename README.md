@@ -60,6 +60,14 @@ collidesWithAny(int id);
 keyDown(char key);
 ```
 
+There are also public variables available:
+
+```cpp
+std::cout << graphics.winX;
+std::cout << graphics.winY;
+std::cout << graphics.winTitle;
+```
+
 More Virtual-Key Codes can be found at: https://learn.microsoft.com/sv-se/windows/win32/inputdev/virtual-key-codes?redirectedfrom=MSDN
 
 The example project:
