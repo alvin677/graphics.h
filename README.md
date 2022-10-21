@@ -68,9 +68,9 @@ std::cout << graphics.winY;
 std::cout << graphics.winTitle;
 ```
 
-More Virtual-Key Codes can be found at: https://learn.microsoft.com/sv-se/windows/win32/inputdev/virtual-key-codes?redirectedfrom=MSDN
+(More Virtual-Key Codes can be found at: https://learn.microsoft.com/sv-se/windows/win32/inputdev/virtual-key-codes?redirectedfrom=MSDN)
 
-The example project:
+Example project:
 
 ```cpp
 #include <iostream>
