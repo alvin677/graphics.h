@@ -41,6 +41,7 @@ init(int windowX, int windowY, std::string title);
 create(int type, int x, int y, int color = WHITE, int width = 1, int height = 1); // As of right now, the only type existing is 0, and it's a rectangle.
 setColor(int id, int color);
 setPosition(int id, int x, int y, int prevColor = BLACK);
+move(int id, std::string direction, int amount, int prevColor = BLACK);
 setSize(int id, int width, int height);
 setType(int id, int type);
 getColor(int id);
@@ -80,7 +81,8 @@ int main()
     while (true) {
         if (graphics.collidesWith(obj, obj2)) { graphics.renderText("COLLIDES", 0, 0, 10); };
 
-        graphics.setPosition(obj, graphics.getPositionX(obj)+1, 10);
+        //graphics.setPosition(obj, graphics.getPositionX(obj)+1, 10);
+        graphics.move(obj, "right", 1);
         graphics.renderAll();
         if (graphics.keyDown('A')) { graphics.renderText("A PRESSED", 10, 10, 9); }
         Sleep(10);
