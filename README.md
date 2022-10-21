@@ -38,25 +38,25 @@ Existing functions in the library:
 
 ```cpp
 init(int windowX, int windowY, std::string title);
-int create(int type, int x, int y, int color = WHITE, int width = 1, int height = 1) // As of right now, the only type existing is 0, and it's a rectangle.
-void setColor(int id, int color)
-void setPosition(int id, int x, int y, int prevColor = BLACK)
-void setSize(int id, int width, int height)
-void setType(int id, int type)
-int getColor(int id)
-int getPositionX(int id)
-int getPositionY(int id)
-int getWidth(int id)
-int getHeight(int id)
-int getType(int id)
-void render(int id)
-void renderAll()
-void renderText(std::string text, int x, int y, int color)
-void draw(int x, int y, int width, int height, int color)
-void clear()
-bool collidesWith(int id, int id2)
-int collidesWithAny(int id)
-bool keyDown(char key)
+create(int type, int x, int y, int color = WHITE, int width = 1, int height = 1); // As of right now, the only type existing is 0, and it's a rectangle.
+setColor(int id, int color);
+setPosition(int id, int x, int y, int prevColor = BLACK);
+setSize(int id, int width, int height);
+setType(int id, int type);
+getColor(int id);
+getPositionX(int id);
+getPositionY(int id);
+getWidth(int id);
+getHeight(int id);
+getType(int id);
+render(int id);
+renderAll();
+renderText(std::string text, int x, int y, int color);
+draw(int x, int y, int width, int height, int color);
+clear();
+collidesWith(int id, int id2);
+collidesWithAny(int id);
+keyDown(char key);
 ```
 
 More Virtual-Key Codes can be found at: https://learn.microsoft.com/sv-se/windows/win32/inputdev/virtual-key-codes?redirectedfrom=MSDN
