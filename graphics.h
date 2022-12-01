@@ -56,14 +56,25 @@ public:
 	void setPosition(int id, int x, int y, int prevColor = BLACK) {
 		int oldX = getPositionX(id);
 		int oldY = getPositionY(id);
+		int widthX = objects.at(id).at(3);
+		int heightY = objects.at(id).at(4);
 		int diffX, diffY;
 		diffX = x - oldX;
-		if (diffX < 0)
+		if (diffX < 0) {
 			diffX = -diffX;
+			oldX = x + widthX;
+		}
+		if (diffX != 0) {
+			draw(oldX, oldY, diffX, heightY, prevColor);
+		}
 		diffY = y - oldY;
-		if (diffY < 0)
+		if (diffY < 0) {
 			diffY = -diffY;
-		draw(oldX, oldY, objects.at(id).at(3)-diffX, objects.at(id).at(4)-diffY, prevColor);
+			oldY = y + heightY;
+		}
+		if (diffY != 0) {
+			draw(oldX, oldY, widthX, diffY, prevColor);
+		}
 		objects.at(id).at(1) = x;
 		objects.at(id).at(2) = y;
 	}
@@ -143,8 +154,8 @@ public:
 	void draw(int x, int y, int width, int height, int color) {
 		SetConsoleTextAttribute(console, color);
 		for (int i = 0; i < width; i++) {
+			coord.X = x + i;
 			for (int j = 0; j < height; j++) {
-				coord.X = x + i;
 				coord.Y = y + j;
 				SetConsoleCursorPosition(console, coord); 
 				std::cout << "X";
