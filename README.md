@@ -1,5 +1,5 @@
 # graphics.h
-A graphics library that can be used in C/C++
+A console graphics library that can be used in C/C++
 
 To use, simply put the graphics.h file in your repos/PROJECTNAME/PROJECTNAME/ folder.
 
